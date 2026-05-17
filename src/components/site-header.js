@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { profile } from '../data/content.js';
 
-const navItems = ['About', 'Skills', 'Projects', 'Experience', 'CV', 'Contact'];
+const navItems = ['About', 'Skills', 'Projects', 'Experience', 'Education', 'CV', 'Contact'];
 
 class SiteHeader extends LitElement {
   createRenderRoot() {
@@ -22,7 +22,7 @@ class SiteHeader extends LitElement {
             </span>
             <span>JF</span>
           </a>
-          <div class="hidden items-center gap-1 rounded-[8px] border border-[color:var(--line-color)] bg-[color:var(--panel)] p-1 md:flex">
+          <div class="hidden items-center gap-1 rounded-[8px] border border-[color:var(--line-color)] bg-[color:var(--panel)] p-1 lg:flex">
             ${navItems.map(
               (item) => html`
                 <a
@@ -38,7 +38,7 @@ class SiteHeader extends LitElement {
             class="shrink-0 rounded-[6px] border border-[color:var(--line-color)] bg-[color:var(--panel)] px-4 py-2 text-sm font-medium shadow-sm hover:-translate-y-0.5 hover:border-accent hover:text-accent hover:shadow-[0_14px_40px_rgba(242,82,58,0.14)]"
             href="mailto:${profile.email}"
           >
-            Start a project
+            Contact
           </a>
         </nav>
       </header>

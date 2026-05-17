@@ -14,7 +14,7 @@ class CvSection extends LitElement {
             <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Curriculum vitae</p>
             <h2 class="mt-4 font-display text-3xl font-semibold sm:text-5xl">Two versions, one technical profile.</h2>
           </div>
-          <div class="grid gap-4 sm:grid-cols-2">
+          <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             ${cvLinks.map(
               (cv, index) => html`
                 <article class="motion-item interactive-card flex min-h-[18rem] flex-col rounded-[8px] border border-[color:var(--line-color)] bg-[color:var(--bg)]/70 p-6" style="--delay: ${index * 100}ms">

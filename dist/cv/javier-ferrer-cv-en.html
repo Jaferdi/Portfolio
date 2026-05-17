@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javier Ferrer | Curriculum Vitae</title>
+    <title>Javier Ferrer Díaz | Curriculum Vitae</title>
     <style>
       :root {
         --bg: #f7f4ef;
         --fg: #10100f;
-        --muted: #625d56;
+        --muted: #5f5a53;
         --line: rgba(16, 16, 15, 0.16);
         --accent: #f2523a;
         --panel: #fffaf3;
@@ -30,7 +30,7 @@
           BlinkMacSystemFont,
           "Segoe UI",
           sans-serif;
-        line-height: 1.55;
+        line-height: 1.5;
       }
 
       a {
@@ -38,7 +38,7 @@
       }
 
       .page {
-        width: min(100%, 960px);
+        width: min(100%, 980px);
         margin: 0 auto;
         padding: 40px 20px 56px;
       }
@@ -46,7 +46,7 @@
       .sheet {
         background: var(--panel);
         border: 1px solid var(--line);
-        padding: clamp(28px, 5vw, 56px);
+        padding: clamp(28px, 5vw, 54px);
         box-shadow: 0 24px 80px rgba(16, 16, 15, 0.08);
       }
 
@@ -55,7 +55,7 @@
         flex-wrap: wrap;
         gap: 12px;
         justify-content: space-between;
-        margin-bottom: 36px;
+        margin-bottom: 28px;
       }
 
       .button {
@@ -75,9 +75,9 @@
 
       header {
         display: grid;
-        gap: 20px;
-        border-bottom: 1px solid var(--line);
-        padding-bottom: 28px;
+        gap: 18px;
+        border-bottom: 2px solid var(--fg);
+        padding-bottom: 26px;
       }
 
       h1,
@@ -88,7 +88,7 @@
       }
 
       h1 {
-        font-size: clamp(2.4rem, 8vw, 4.7rem);
+        font-size: clamp(2.35rem, 7vw, 4.5rem);
         line-height: 0.95;
         letter-spacing: 0;
       }
@@ -96,32 +96,42 @@
       h2 {
         margin-bottom: 14px;
         color: var(--accent);
-        font-size: 0.8rem;
-        letter-spacing: 0.18em;
+        font-size: 0.82rem;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
       }
 
       h3 {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+      }
+
+      ul {
+        margin: 10px 0 0;
+        padding-left: 1.15rem;
+      }
+
+      li {
+        margin-top: 5px;
       }
 
       .role {
+        margin-top: 8px;
         color: var(--muted);
-        font-size: 1.2rem;
-        font-weight: 700;
+        font-size: 1.18rem;
+        font-weight: 800;
       }
 
       .contact {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px 18px;
+        gap: 8px 18px;
         color: var(--muted);
         font-size: 0.95rem;
       }
 
       section {
         border-bottom: 1px solid var(--line);
-        padding: 28px 0;
+        padding: 24px 0;
       }
 
       section:last-child {
@@ -131,50 +141,51 @@
 
       .grid {
         display: grid;
-        gap: 16px;
-      }
-
-      .skills {
-        display: grid;
         gap: 14px;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       }
 
-      .skill-card,
+      .two-column {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      }
+
       .item {
-        border: 1px solid var(--line);
-        padding: 16px;
+        border-left: 3px solid var(--line);
+        padding-left: 15px;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 0.92rem;
+        font-weight: 800;
+      }
+
+      .item p,
+      .item li,
+      .compact {
+        color: var(--muted);
       }
 
       .tags {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin-top: 12px;
+        margin-top: 10px;
       }
 
       .tag {
         border: 1px solid var(--line);
-        padding: 6px 9px;
+        padding: 5px 8px;
         color: var(--muted);
-        font-size: 0.86rem;
+        font-size: 0.84rem;
         font-weight: 700;
-      }
-
-      .meta {
-        color: var(--muted);
-        font-size: 0.92rem;
-        font-weight: 700;
-      }
-
-      .item p {
-        margin-top: 8px;
-        color: var(--muted);
       }
 
       @media print {
         body {
           background: #fff;
+          font-size: 10.5pt;
         }
 
         .page {
@@ -190,6 +201,11 @@
         .topbar {
           display: none;
         }
+
+        section {
+          break-inside: avoid;
+          padding: 15px 0;
+        }
       }
     </style>
   </head>
@@ -203,11 +219,12 @@
       <article class="sheet">
         <header>
           <div>
-            <h1>Javier Ferrer</h1>
-            <p class="role">Full-Stack Developer</p>
+            <h1>Javier Ferrer Díaz</h1>
+            <p class="role">Junior Software Developer</p>
           </div>
           <div class="contact" aria-label="Contact details">
             <a href="mailto:javierferrerdiaz1@gmail.com">javierferrerdiaz1@gmail.com</a>
+            <span>Granada, Spain</span>
             <a href="https://github.com/Jaferdi">github.com/Jaferdi</a>
             <a href="https://linkedin.com/in/javierfd1">linkedin.com/in/javierfd1</a>
           </div>
@@ -216,84 +233,110 @@
         <section>
           <h2>Profile</h2>
           <p>
-            Full-stack developer focused on Angular interfaces, Node.js APIs, Python automation, ETL processes,
-            and data-backed systems. I build services, scripts, and workflows that connect product needs with
-            reliable operations.
+            Junior software developer trained in Web Application Development and Multiplatform Application Development.
+            Professional experience resolving incidents, debugging, performing functional analysis, planning programming
+            tasks, and adapting to new languages and environments.
           </p>
-        </section>
-
-        <section>
-          <h2>Core Skills</h2>
-          <div class="skills">
-            <div class="skill-card">
-              <h3>Frontend</h3>
-              <div class="tags">
-                <span class="tag">Angular</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-              </div>
-            </div>
-            <div class="skill-card">
-              <h3>Backend & APIs</h3>
-              <div class="tags">
-                <span class="tag">Node.js</span>
-                <span class="tag">REST APIs</span>
-                <span class="tag">Python</span>
-                <span class="tag">Automation scripts</span>
-                <span class="tag">ETLs</span>
-              </div>
-            </div>
-            <div class="skill-card">
-              <h3>Data & DevOps</h3>
-              <div class="tags">
-                <span class="tag">SQL</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">InfluxDB</span>
-                <span class="tag">Docker</span>
-                <span class="tag">Git</span>
-              </div>
-            </div>
-          </div>
         </section>
 
         <section>
           <h2>Experience</h2>
           <div class="grid">
-            <div class="item">
-              <p class="meta">2024 - Present</p>
-              <h3>Full-Stack Developer</h3>
-              <p>Builds Angular interfaces, Node.js APIs, automation scripts, and data workflows.</p>
-            </div>
-            <div class="item">
-              <p class="meta">2022 - 2024</p>
-              <h3>Frontend Engineer</h3>
-              <p>Built accessible component systems, optimized delivery pipelines, and worked closely with product needs.</p>
-            </div>
-            <div class="item">
-              <p class="meta">2020 - 2022</p>
+            <article class="item">
+              <p class="meta">2025 - Present | Innovaciones Tecnológicas del Sur</p>
               <h3>Software Developer</h3>
-              <p>Delivered REST services, SQL-backed features, ETL processes, internal tools, and Docker workflows.</p>
+              <ul>
+                <li>Develop and maintain software.</li>
+                <li>Resolve incidents and debug errors.</li>
+                <li>Communicate effectively, adapt to changes, and contribute to continuous improvement.</li>
+              </ul>
+            </article>
+            <article class="item">
+              <p class="meta">2025 | Innovaciones Tecnológicas del Sur</p>
+              <h3>Software Development Intern</h3>
+              <ul>
+                <li>Supported programming, coding, and individual work on assigned features.</li>
+                <li>Performed functional analysis and planned programming tasks.</li>
+                <li>Resolved incidents and adapted to new languages.</li>
+              </ul>
+            </article>
+            <article class="item">
+              <p class="meta">2024 | Grupo Euro-CENTER</p>
+              <h3>Intern</h3>
+              <ul>
+                <li>Worked on problem solving in a professional environment.</li>
+                <li>Supported task planning, organization, observation, and analysis.</li>
+                <li>Practiced teamwork, creativity, and adaptability.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <div class="grid">
+            <article class="item">
+              <p class="meta">2024 - 2025 | STEM Granada</p>
+              <h3>Higher Technician in Web Application Development</h3>
+            </article>
+            <article class="item">
+              <p class="meta">2022 - 2024 | MEDAC Nevada</p>
+              <h3>Higher Technician in Multiplatform Application Development</h3>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2>Projects</h2>
+          <div class="grid">
+            <article class="item">
+              <p class="meta">github.com/Jaferdi/Portfolio</p>
+              <h3>Personal Portfolio</h3>
+              <p>Portfolio built to present projects, experience, education, and technologies with attention to performance, clean architecture, and user experience.</p>
+            </article>
+            <article class="item">
+              <p class="meta">github.com/Jaferdi/TresEnRaya</p>
+              <h3>Tic-tac-toe</h3>
+              <p>Java tic-tac-toe project with domain classes for board, cells, and players, plus Javadoc documentation published through GitHub Pages.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2>Technical Skills</h2>
+          <div class="two-column">
+            <div>
+              <h3>Languages and frontend</h3>
+              <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">React</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Tailwind CSS</span>
+              </div>
+            </div>
+            <div>
+              <h3>Backend, data, and tools</h3>
+              <div class="tags">
+                <span class="tag">PHP</span>
+                <span class="tag">Laravel</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Git</span>
+                <span class="tag">GitHub</span>
+                <span class="tag">Debugging</span>
+              </div>
             </div>
           </div>
         </section>
 
         <section>
-          <h2>Selected Work</h2>
-          <div class="grid">
-            <div class="item">
-              <h3>Angular Operations Workspace</h3>
-              <p>Internal workspace for monitoring jobs, API health, and operational workflows.</p>
-            </div>
-            <div class="item">
-              <h3>Automation API Hub</h3>
-              <p>Node.js service layer for third-party APIs, payload validation, and recurring integration tasks.</p>
-            </div>
-            <div class="item">
-              <h3>Data Pipeline Monitor</h3>
-              <p>ETL workflow for normalizing business data, storing time-series metrics, and keeping quality visible.</p>
-            </div>
+          <h2>Languages and Additional Information</h2>
+          <div class="two-column compact">
+            <p>Native Spanish. English B2 in progress.</p>
+            <p>Driving licences B, A1, and AM. Own vehicle and full availability.</p>
           </div>
         </section>
       </article>

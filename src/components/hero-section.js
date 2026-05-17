@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { profile } from '../data/content.js';
+import { facts, profile } from '../data/content.js';
 import './code-constellation.js';
 
 class HeroSection extends LitElement {
@@ -41,15 +41,15 @@ class HeroSection extends LitElement {
           <div class="max-w-4xl">
             <p class="reveal mb-5 inline-flex items-center gap-3 rounded-[6px] border border-[color:var(--line-color)] bg-[color:var(--panel)] px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted-copy)]">
               <span class="h-2 w-2 animate-pulse bg-mint"></span>
-              Available for focused product work
+              Based in ${profile.location}
             </p>
-            <h1 class="reveal delay-1 font-display text-5xl font-semibold leading-[0.95] tracking-normal sm:text-7xl lg:text-8xl">
+            <h1 class="reveal delay-1 font-display text-4xl font-semibold leading-[0.98] tracking-normal sm:text-6xl lg:text-7xl">
               ${profile.name}
               <span class="block">${profile.role}</span>
-              <span class="block text-accent">for precise digital products.</span>
+              <span class="block text-accent">building practical software.</span>
             </h1>
             <p class="reveal delay-2 mt-7 max-w-2xl text-lg leading-8 text-[color:var(--muted-copy)] sm:text-xl">
-              I build Angular interfaces, Node.js APIs, Python automations, and data workflows that stay understandable as they grow.
+              ${profile.summary}
             </p>
             <div class="reveal delay-3 mt-9 flex flex-col gap-3 sm:flex-row">
               <a
@@ -66,12 +66,8 @@ class HeroSection extends LitElement {
               </a>
             </div>
             <div class="reveal delay-4 mt-12 grid max-w-2xl grid-cols-3 border-y border-[color:var(--line-color)]">
-              ${[
-                ['8+', 'shipped products'],
-                ['3', 'core layers'],
-                ['2', 'CV languages'],
-              ].map(
-                ([value, label]) => html`
+              ${facts.map(
+                ({ value, label }) => html`
                   <div class="border-r border-[color:var(--line-color)] py-4 pr-4 last:border-r-0 last:pl-4 sm:pr-6 sm:last:pl-6">
                     <p class="font-display text-2xl font-semibold sm:text-3xl">${value}</p>
                     <p class="mt-1 text-xs font-semibold uppercase leading-5 tracking-[0.16em] text-[color:var(--muted-copy)]">${label}</p>

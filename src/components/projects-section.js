@@ -13,13 +13,13 @@ class ProjectsSection extends LitElement {
           <div class="motion-item mb-12 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Projects</p>
-              <h2 class="mt-4 font-display text-3xl font-semibold sm:text-5xl">Selected builds with a clear point of view.</h2>
+              <h2 class="mt-4 font-display text-3xl font-semibold sm:text-5xl">Public work from GitHub.</h2>
             </div>
             <p class="max-w-2xl text-lg leading-8 text-[color:var(--muted-copy)] lg:justify-self-end">
-              Each project is shaped around constraints: speed, maintainability, integration quality, and a user interface that does not ask for extra attention.
+              These projects are pulled from the public profile and described around what is visible in the repositories: source code, documentation, deployment, and stack.
             </p>
           </div>
-          <div class="grid gap-5 lg:grid-cols-3">
+          <div class="grid gap-5 lg:grid-cols-2">
             ${projects.map(
               (project, index) => html`
                 <article class="motion-item interactive-card group flex min-h-[25rem] flex-col rounded-[8px] border border-[color:var(--line-color)] bg-[color:var(--bg)] p-6 hover:border-accent/80" style="--delay: ${index * 110}ms">
@@ -39,10 +39,10 @@ class ProjectsSection extends LitElement {
                     )}
                   </div>
                   <div class="mt-8 flex gap-4 text-sm font-semibold">
-                    <a class="magnetic-link rounded-[6px] px-1 text-accent hover:opacity-70" href=${project.live} aria-label="Open live preview for ${project.title}">
+                    <a class="magnetic-link rounded-[6px] px-1 text-accent hover:opacity-70" href=${project.live} target="_blank" rel="noopener" aria-label="Open live preview for ${project.title}">
                       Live
                     </a>
-                    <a class="magnetic-link rounded-[6px] px-1 text-[color:var(--fg)] hover:text-accent" href=${project.source} aria-label="Open source code for ${project.title}">
+                    <a class="magnetic-link rounded-[6px] px-1 text-[color:var(--fg)] hover:text-accent" href=${project.source} target="_blank" rel="noopener" aria-label="Open source code for ${project.title}">
                       Source
                     </a>
                   </div>

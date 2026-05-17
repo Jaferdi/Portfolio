@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "cv:pdf": "groff -Kutf8 -Tpdf -ms src/cv/javier-ferrer-cv-es.ms > public/cv/javier-ferrer-cv-es.pdf",
     "preview": "vite preview"
   },
   "dependencies": {

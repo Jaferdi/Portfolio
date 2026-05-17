@@ -16,11 +16,11 @@ class SkillsSection extends LitElement {
               <h2 class="font-display text-3xl font-semibold sm:text-5xl">A compact toolkit for complete products.</h2>
             </div>
             <div class="hidden border border-[color:var(--line-color)] bg-[color:var(--panel)] p-4 text-right lg:block">
-              <p class="font-display text-4xl font-semibold">03</p>
+              <p class="font-display text-4xl font-semibold">${String(skills.length).padStart(2, '0')}</p>
               <p class="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted-copy)]">disciplines</p>
             </div>
           </div>
-          <div class="grid gap-4 md:grid-cols-3">
+          <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             ${skills.map(
               (skill, index) => html`
                 <article class="motion-item interactive-card group rounded-[8px] border border-[color:var(--line-color)] bg-[color:var(--panel)] p-6 backdrop-blur-sm hover:border-accent/70" style="--delay: ${index * 90}ms">

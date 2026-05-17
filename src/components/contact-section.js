@@ -14,7 +14,7 @@ class ContactSection extends LitElement {
             <div class="motion-item">
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Contact</p>
               <h2 class="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight sm:text-6xl">
-                Have a product that needs a cleaner path from idea to shipped?
+                Available for software development roles and technical internships.
               </h2>
             </div>
             <div class="motion-item grid gap-4 text-sm" style="--delay: 140ms">
@@ -32,6 +32,9 @@ class ContactSection extends LitElement {
                   LinkedIn
                 </a>
               </div>
+              <a class="interactive-card rounded-[6px] border border-[color:var(--line-color)] bg-[color:var(--panel)] px-4 py-3 text-center font-semibold hover:border-accent hover:text-accent" href="tel:${profile.phone.replaceAll(' ', '')}">
+                ${profile.phone}
+              </a>
             </div>
           </div>
           <footer class="mt-16 flex flex-col gap-3 border-t border-[color:var(--line-color)] py-6 text-sm text-[color:var(--muted-copy)] sm:flex-row sm:items-center sm:justify-between">
