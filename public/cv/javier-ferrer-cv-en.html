@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javier Ferrer | Curriculum Vitae</title>
+    <style>
+      :root {
+        --bg: #f7f4ef;
+        --fg: #10100f;
+        --muted: #625d56;
+        --line: rgba(16, 16, 15, 0.16);
+        --accent: #f2523a;
+        --panel: #fffaf3;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        width: min(100%, 960px);
+        margin: 0 auto;
+        padding: 40px 20px 56px;
+      }
+
+      .sheet {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: clamp(28px, 5vw, 56px);
+        box-shadow: 0 24px 80px rgba(16, 16, 15, 0.08);
+      }
+
+      .topbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: space-between;
+        margin-bottom: 36px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        border: 1px solid var(--line);
+        background: transparent;
+        padding: 10px 14px;
+        color: var(--fg);
+        font: inherit;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      header {
+        display: grid;
+        gap: 20px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 28px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 8vw, 4.7rem);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin-bottom: 14px;
+        color: var(--accent);
+        font-size: 0.8rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      .role {
+        color: var(--muted);
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      section {
+        border-bottom: 1px solid var(--line);
+        padding: 28px 0;
+      }
+
+      section:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .skills {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      }
+
+      .skill-card,
+      .item {
+        border: 1px solid var(--line);
+        padding: 16px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .tag {
+        border: 1px solid var(--line);
+        padding: 6px 9px;
+        color: var(--muted);
+        font-size: 0.86rem;
+        font-weight: 700;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 0.92rem;
+        font-weight: 700;
+      }
+
+      .item p {
+        margin-top: 8px;
+        color: var(--muted);
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page {
+          padding: 0;
+        }
+
+        .sheet {
+          border: 0;
+          box-shadow: none;
+          padding: 0;
+        }
+
+        .topbar {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="topbar">
+        <a class="button" href="/#cv">Back to portfolio</a>
+        <button class="button" type="button" onclick="window.print()">Print / Save as PDF</button>
+      </div>
+
+      <article class="sheet">
+        <header>
+          <div>
+            <h1>Javier Ferrer</h1>
+            <p class="role">Full-Stack Developer</p>
+          </div>
+          <div class="contact" aria-label="Contact details">
+            <a href="mailto:javierferrerdiaz1@gmail.com">javierferrerdiaz1@gmail.com</a>
+            <a href="https://github.com/Jaferdi">github.com/Jaferdi</a>
+            <a href="https://linkedin.com/in/javierfd1">linkedin.com/in/javierfd1</a>
+          </div>
+        </header>
+
+        <section>
+          <h2>Profile</h2>
+          <p>
+            Full-stack developer focused on Angular interfaces, Node.js APIs, Python automation, ETL processes,
+            and data-backed systems. I build services, scripts, and workflows that connect product needs with
+            reliable operations.
+          </p>
+        </section>
+
+        <section>
+          <h2>Core Skills</h2>
+          <div class="skills">
+            <div class="skill-card">
+              <h3>Frontend</h3>
+              <div class="tags">
+                <span class="tag">Angular</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+            </div>
+            <div class="skill-card">
+              <h3>Backend & APIs</h3>
+              <div class="tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">Python</span>
+                <span class="tag">Automation scripts</span>
+                <span class="tag">ETLs</span>
+              </div>
+            </div>
+            <div class="skill-card">
+              <h3>Data & DevOps</h3>
+              <div class="tags">
+                <span class="tag">SQL</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">InfluxDB</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Experience</h2>
+          <div class="grid">
+            <div class="item">
+              <p class="meta">2024 - Present</p>
+              <h3>Full-Stack Developer</h3>
+              <p>Builds Angular interfaces, Node.js APIs, automation scripts, and data workflows.</p>
+            </div>
+            <div class="item">
+              <p class="meta">2022 - 2024</p>
+              <h3>Frontend Engineer</h3>
+              <p>Built accessible component systems, optimized delivery pipelines, and worked closely with product needs.</p>
+            </div>
+            <div class="item">
+              <p class="meta">2020 - 2022</p>
+              <h3>Software Developer</h3>
+              <p>Delivered REST services, SQL-backed features, ETL processes, internal tools, and Docker workflows.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Selected Work</h2>
+          <div class="grid">
+            <div class="item">
+              <h3>Angular Operations Workspace</h3>
+              <p>Internal workspace for monitoring jobs, API health, and operational workflows.</p>
+            </div>
+            <div class="item">
+              <h3>Automation API Hub</h3>
+              <p>Node.js service layer for third-party APIs, payload validation, and recurring integration tasks.</p>
+            </div>
+            <div class="item">
+              <h3>Data Pipeline Monitor</h3>
+              <p>ETL workflow for normalizing business data, storing time-series metrics, and keeping quality visible.</p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

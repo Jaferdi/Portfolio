@@ -5,6 +5,7 @@ import './about-section.js';
 import './skills-section.js';
 import './projects-section.js';
 import './experience-section.js';
+import './cv-section.js';
 import './contact-section.js';
 
 class PortfolioApp extends LitElement {
@@ -74,6 +75,7 @@ class PortfolioApp extends LitElement {
         <skills-section></skills-section>
         <projects-section></projects-section>
         <experience-section></experience-section>
+        <cv-section></cv-section>
         <contact-section></contact-section>
       </main>
     `;

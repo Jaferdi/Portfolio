@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { profile } from '../data/content.js';
 
-const navItems = ['About', 'Skills', 'Projects', 'Experience', 'Contact'];
+const navItems = ['About', 'Skills', 'Projects', 'Experience', 'CV', 'Contact'];
 
 class SiteHeader extends LitElement {
   createRenderRoot() {

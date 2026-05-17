@@ -49,7 +49,7 @@ class HeroSection extends LitElement {
               <span class="block text-accent">for precise digital products.</span>
             </h1>
             <p class="reveal delay-2 mt-7 max-w-2xl text-lg leading-8 text-[color:var(--muted-copy)] sm:text-xl">
-              I build clean interfaces, reliable services, and product systems that stay understandable as they grow.
+              I build Angular interfaces, Node.js APIs, Python automations, and data workflows that stay understandable as they grow.
             </p>
             <div class="reveal delay-3 mt-9 flex flex-col gap-3 sm:flex-row">
               <a
@@ -69,7 +69,7 @@ class HeroSection extends LitElement {
               ${[
                 ['8+', 'shipped products'],
                 ['3', 'core layers'],
-                ['100%', 'English content'],
+                ['2', 'CV languages'],
               ].map(
                 ([value, label]) => html`
                   <div class="border-r border-[color:var(--line-color)] py-4 pr-4 last:border-r-0 last:pl-4 sm:pr-6 sm:last:pl-6">
