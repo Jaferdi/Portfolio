@@ -7,6 +7,8 @@ class ContactSection extends LitElement {
   }
 
   render() {
+    const normalizedPhone = profile.phone?.replaceAll(' ', '');
+
     return html`
       <section id="contact" class="px-5 pb-8 pt-20 sm:px-8 lg:pt-28">
         <div class="mx-auto max-w-7xl border-t border-[color:var(--line-color)] pt-12">
@@ -32,9 +34,13 @@ class ContactSection extends LitElement {
                   LinkedIn
                 </a>
               </div>
-              <a class="interactive-card rounded-[6px] border border-[color:var(--line-color)] bg-[color:var(--panel)] px-4 py-3 text-center font-semibold hover:border-accent hover:text-accent" href="tel:${profile.phone.replaceAll(' ', '')}">
-                ${profile.phone}
-              </a>
+              ${profile.phone
+                ? html`
+                    <a class="interactive-card rounded-[6px] border border-[color:var(--line-color)] bg-[color:var(--panel)] px-4 py-3 text-center font-semibold hover:border-accent hover:text-accent" href="tel:${normalizedPhone}">
+                      ${profile.phone}
+                    </a>
+                  `
+                : ''}
             </div>
           </div>
           <footer class="mt-16 flex flex-col gap-3 border-t border-[color:var(--line-color)] py-6 text-sm text-[color:var(--muted-copy)] sm:flex-row sm:items-center sm:justify-between">
