@@ -1,30 +1,21 @@
-
 # Portfolio
-Portfolio personal donde presento mis proyectos, experiencia y tecnologías con las que trabajo. Desarrollado con enfoque en rendimiento, arquitectura limpia y experiencia de usuario.
-=======
-# Minimal Lit Portfolio
 
-A polished full-stack developer portfolio built with pnpm, Vite, Lit Web Components, and Tailwind CSS.
+My personal site: the projects I've built, my experience and the technologies I work with.
 
-## Install
+**Live:** [portfolio-phi-orpin-63.vercel.app](https://portfolio-phi-orpin-63.vercel.app)
+
+Built with [Lit](https://lit.dev) web components, [Vite](https://vite.dev), [Tailwind CSS](https://tailwindcss.com) and [three.js](https://threejs.org), with a focus on performance, clean architecture and user experience.
+
+## Run it locally
 
 ```bash
 pnpm install
-```
-
-## Run Locally
-
-```bash
-pnpm dev
-```
-
-## Build
-
-```bash
-pnpm build
+pnpm dev       # development server
+pnpm build     # production build in dist/
+pnpm preview   # serve the build
 ```
 
 ## Customize
 
-Edit the profile, projects, skills, and experience in `src/data/content.js`.
-
+- Profile, projects, skills and experience: `src/data/content.js`.
+- CV: `pnpm cv:pdf` builds `public/cv/javier-ferrer-cv-es.pdf` from `src/cv/javier-ferrer-cv-es.ms` (needs `groff`).
