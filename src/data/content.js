@@ -68,11 +68,18 @@ export const projects = [
     source: 'https://github.com/Jaferdi/tokenometro',
   },
   {
+    title: 'Gestión de citas',
+    description:
+      'Full stack app to manage departments, staff, rooms, procedures and appointments: NestJS 11 with hexagonal architecture, JWT roles, real-time notifications, S3-compatible file storage and a Next.js 15 front end with an appointment calendar.',
+    stack: ['NestJS', 'TypeScript', 'MySQL', 'Socket.io', 'MinIO', 'Next.js', 'React', 'Docker'],
+    source: 'https://github.com/Jaferdi/gestion-citas-fullstack',
+  },
+  {
     title: 'Portfolio',
     description:
       'Personal portfolio built to present my projects, experience, education, and technical profile with a polished, responsive interface.',
     stack: ['JavaScript', 'Lit', 'Vite', 'Tailwind CSS', 'Three.js'],
-    live: 'https://portfolio-phi-orpin-63.vercel.app/',
+    live: 'https://portfolio-jaferdi.vercel.app/',
     source: 'https://github.com/Jaferdi/Portfolio',
   },
 ];

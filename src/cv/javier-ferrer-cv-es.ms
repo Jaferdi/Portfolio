@@ -82,7 +82,7 @@ Panel local que muestra cuánto cuestan las sesiones de Claude Code y recomienda
 Python solo con la biblioteca estándar (sin dependencias), con 93 tests, CI en GitHub Actions (Linux, macOS y Windows), paquete instalable con pipx
 y plugin de Claude Code. Bilingüe ES/EN, con licencia MIT.
 .LP
-\fBPortfolio | portfolio-phi-orpin-63.vercel.app\fP
+\fBPortfolio | portfolio-jaferdi.vercel.app\fP
 .br
 Web personal con web components de Lit, Vite, Tailwind CSS y three.js, desplegada en Vercel. El CV se genera en PDF desde el propio repositorio.
 .SECTION Estudios
