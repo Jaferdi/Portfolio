@@ -6,7 +6,7 @@ export const profile = {
   github: 'https://github.com/Jaferdi',
   linkedin: 'https://linkedin.com/in/javierfd1',
   summary:
-    'Full stack developer with a year and a half of production experience building software for the public sector and smart cities: a multi-tenant platform used by about 12 city councils, around 20 ETL pipelines, IoT and camera integrations, and the migration of legacy C applications to Angular. I work with Angular, NestJS, TypeScript, MySQL, PostGIS, MongoDB and InfluxDB, and I use AI coding agents every day.',
+    'Full stack developer with a year and a half of production experience building software for the public sector and smart cities: a multi-tenant platform for more than 10 city councils, around 20 ETL pipelines, IoT and camera integrations, and the migration of legacy C applications to Angular. I work with Angular, NestJS, TypeScript, MySQL, PostGIS, MongoDB and InfluxDB, and I use AI coding agents every day.',
 };
 
 export const skills = [
@@ -90,7 +90,7 @@ export const experience = [
     title: 'Full Stack Developer',
     company: 'Innovaciones Tecnológicas del Sur',
     detail:
-      'Built a multi-tenant smart city platform used by about 12 city councils, around 20 ETL pipelines, IoT and licence plate camera integrations, and migrated more than 24 legacy C applications to Angular for the Provincial Council of Jaén. About 1,900 commits across more than 50 repositories.',
+      'Built a multi-tenant smart city platform for more than 10 city councils, around 20 ETL pipelines, IoT and licence plate camera integrations, and migrated more than 24 legacy C applications to Angular. About 1,900 commits across more than 50 repositories.',
     highlights: ['Angular', 'NestJS', 'ETL & IoT', 'Legacy migration', 'Code review', 'AI automation'],
   },
   {
@@ -136,7 +136,7 @@ export const facts = [
     label: 'commits at work',
   },
   {
-    value: '12+',
+    value: '10+',
     label: 'city councils served',
   },
 ];

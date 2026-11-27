@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "cv:pdf": "groff -Kutf8 -Tpdf -ms src/cv/javier-ferrer-cv-es.ms > public/cv/javier-ferrer-cv-es.pdf",
+    "cv:pdf": "google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=public/cv/javier-ferrer-cv-es.pdf public/cv/javier-ferrer-cv-es.html && google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=public/cv/javier-ferrer-cv-en.pdf public/cv/javier-ferrer-cv-en.html",
     "preview": "vite preview"
   },
   "dependencies": {
