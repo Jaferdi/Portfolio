@@ -18,4 +18,4 @@ pnpm preview   # serve the build
 ## Customize
 
 - Profile, projects, skills and experience: `src/data/content.js`.
-- CV: `pnpm cv:pdf` builds `public/cv/javier-ferrer-cv-es.pdf` from `src/cv/javier-ferrer-cv-es.ms` (needs `groff`).
+- CV: edit `public/cv/javier-ferrer-cv-{es,en}.html`; `pnpm cv:pdf` prints both to PDF with headless Chrome.

@@ -1,345 +1,61 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javier Ferrer Díaz | Curriculum Vitae</title>
-    <style>
-      :root {
-        --bg: #f7f4ef;
-        --fg: #10100f;
-        --muted: #5f5a53;
-        --line: rgba(16, 16, 15, 0.16);
-        --accent: #f2523a;
-        --panel: #fffaf3;
-      }
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Javier Ferrer Díaz | CV</title>
+<style>
+:root{--fg:#10100f;--muted:#4f4a44;--line:rgba(16,16,15,.16);--accent:#d9432b}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--fg);font-family:Inter,"Segoe UI",system-ui,sans-serif;font-size:9.6pt;line-height:1.4}
+@page{size:A4;margin:13mm 14mm}
+h1{font-size:23pt;margin:0;line-height:1}
+h2{color:var(--accent);font-size:8pt;letter-spacing:.16em;text-transform:uppercase;margin:12px 0 5px;border-top:1px solid var(--line);padding-top:8px}
+h3{font-size:10.5pt;margin:8px 0 2px}
+p{margin:0 0 5px}
+ul{margin:3px 0 0;padding-left:1.1rem}
+li{margin-top:2px}
+a{color:inherit}
+.role{color:var(--muted);font-weight:800;font-size:11pt;margin-top:4px}
+.contact{color:var(--muted);margin-top:6px;display:flex;flex-wrap:wrap;gap:2px 14px}
+.meta{color:var(--muted);font-weight:700}
+.muted{color:var(--muted)}
+.box{border-left:3px solid var(--line);padding-left:10px;margin:8px 0;break-inside:avoid}
+.story{break-inside:avoid;margin-bottom:10px}
+.story dt{font-weight:800;margin-top:4px}
+.story dd{margin:0 0 2px 0;color:var(--muted)}
+header{border-bottom:2px solid var(--fg);padding-bottom:10px}
 
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--fg);
-        font-family:
-          Inter,
-          ui-sans-serif,
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
-        line-height: 1.5;
-      }
-
-      a {
-        color: inherit;
-      }
-
-      .page {
-        width: min(100%, 980px);
-        margin: 0 auto;
-        padding: 40px 20px 56px;
-      }
-
-      .sheet {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        padding: clamp(28px, 5vw, 54px);
-        box-shadow: 0 24px 80px rgba(16, 16, 15, 0.08);
-      }
-
-      .topbar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        justify-content: space-between;
-        margin-bottom: 28px;
-      }
-
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 42px;
-        border: 1px solid var(--line);
-        background: transparent;
-        padding: 10px 14px;
-        color: var(--fg);
-        font: inherit;
-        font-weight: 700;
-        text-decoration: none;
-        cursor: pointer;
-      }
-
-      header {
-        display: grid;
-        gap: 18px;
-        border-bottom: 2px solid var(--fg);
-        padding-bottom: 26px;
-      }
-
-      h1,
-      h2,
-      h3,
-      p {
-        margin: 0;
-      }
-
-      h1 {
-        font-size: clamp(2.35rem, 7vw, 4.5rem);
-        line-height: 0.95;
-        letter-spacing: 0;
-      }
-
-      h2 {
-        margin-bottom: 14px;
-        color: var(--accent);
-        font-size: 0.82rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-      }
-
-      h3 {
-        font-size: 1.05rem;
-      }
-
-      ul {
-        margin: 10px 0 0;
-        padding-left: 1.15rem;
-      }
-
-      li {
-        margin-top: 5px;
-      }
-
-      .role {
-        margin-top: 8px;
-        color: var(--muted);
-        font-size: 1.18rem;
-        font-weight: 800;
-      }
-
-      .contact {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px 18px;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      section {
-        border-bottom: 1px solid var(--line);
-        padding: 24px 0;
-      }
-
-      section:last-child {
-        border-bottom: 0;
-        padding-bottom: 0;
-      }
-
-      .grid {
-        display: grid;
-        gap: 14px;
-      }
-
-      .two-column {
-        display: grid;
-        gap: 18px;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      }
-
-      .item {
-        border-left: 3px solid var(--line);
-        padding-left: 15px;
-      }
-
-      .meta {
-        color: var(--muted);
-        font-size: 0.92rem;
-        font-weight: 800;
-      }
-
-      .item p,
-      .item li,
-      .compact {
-        color: var(--muted);
-      }
-
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-      }
-
-      .tag {
-        border: 1px solid var(--line);
-        padding: 5px 8px;
-        color: var(--muted);
-        font-size: 0.84rem;
-        font-weight: 700;
-      }
-
-      @media print {
-        body {
-          background: #fff;
-          font-size: 10.5pt;
-        }
-
-        .page {
-          padding: 0;
-        }
-
-        .sheet {
-          border: 0;
-          box-shadow: none;
-          padding: 0;
-        }
-
-        .topbar {
-          display: none;
-        }
-
-        section {
-          break-inside: avoid;
-          padding: 15px 0;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main class="page">
-      <div class="topbar">
-        <a class="button" href="/#cv">Back to portfolio</a>
-        <button class="button" type="button" onclick="window.print()">Print / Save as PDF</button>
-      </div>
-
-      <article class="sheet">
-        <header>
-          <div>
-            <h1>Javier Ferrer Díaz</h1>
-            <p class="role">Junior Software Developer</p>
-          </div>
-          <div class="contact" aria-label="Contact details">
-            <a href="mailto:javierferrerdiaz1@gmail.com">javierferrerdiaz1@gmail.com</a>
-            <span>Granada, Spain</span>
-            <a href="https://github.com/Jaferdi">github.com/Jaferdi</a>
-            <a href="https://linkedin.com/in/javierfd1">linkedin.com/in/javierfd1</a>
-          </div>
-        </header>
-
-        <section>
-          <h2>Profile</h2>
-          <p>
-            Junior software developer trained in Web Application Development and Multiplatform Application Development.
-            Professional experience resolving incidents, debugging, performing functional analysis, planning programming
-            tasks, and adapting to new languages and environments.
-          </p>
-        </section>
-
-        <section>
-          <h2>Experience</h2>
-          <div class="grid">
-            <article class="item">
-              <p class="meta">2025 - Present | Innovaciones Tecnológicas del Sur</p>
-              <h3>Software Developer</h3>
-              <ul>
-                <li>Develop and maintain software.</li>
-                <li>Resolve incidents and debug errors.</li>
-                <li>Communicate effectively, adapt to changes, and contribute to continuous improvement.</li>
-              </ul>
-            </article>
-            <article class="item">
-              <p class="meta">2025 | Innovaciones Tecnológicas del Sur</p>
-              <h3>Software Development Intern</h3>
-              <ul>
-                <li>Supported programming, coding, and individual work on assigned features.</li>
-                <li>Performed functional analysis and planned programming tasks.</li>
-                <li>Resolved incidents and adapted to new languages.</li>
-              </ul>
-            </article>
-            <article class="item">
-              <p class="meta">2024 | Grupo Euro-CENTER</p>
-              <h3>Intern</h3>
-              <ul>
-                <li>Worked on problem solving in a professional environment.</li>
-                <li>Supported task planning, organization, observation, and analysis.</li>
-                <li>Practiced teamwork, creativity, and adaptability.</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section>
-          <h2>Education</h2>
-          <div class="grid">
-            <article class="item">
-              <p class="meta">2024 - 2025 | STEM Granada</p>
-              <h3>Higher Technician in Web Application Development</h3>
-            </article>
-            <article class="item">
-              <p class="meta">2022 - 2024 | MEDAC Nevada</p>
-              <h3>Higher Technician in Multiplatform Application Development</h3>
-            </article>
-          </div>
-        </section>
-
-        <section>
-          <h2>Projects</h2>
-          <div class="grid">
-            <article class="item">
-              <p class="meta">github.com/Jaferdi/Portfolio</p>
-              <h3>Personal Portfolio</h3>
-              <p>Portfolio built to present projects, experience, education, and technologies with attention to performance, clean architecture, and user experience.</p>
-            </article>
-            <article class="item">
-              <p class="meta">github.com/Jaferdi/TresEnRaya</p>
-              <h3>Tic-tac-toe</h3>
-              <p>Java tic-tac-toe project with domain classes for board, cells, and players, plus Javadoc documentation published through GitHub Pages.</p>
-            </article>
-          </div>
-        </section>
-
-        <section>
-          <h2>Technical Skills</h2>
-          <div class="two-column">
-            <div>
-              <h3>Languages and frontend</h3>
-              <div class="tags">
-                <span class="tag">Java</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">React</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">Tailwind CSS</span>
-              </div>
-            </div>
-            <div>
-              <h3>Backend, data, and tools</h3>
-              <div class="tags">
-                <span class="tag">PHP</span>
-                <span class="tag">Laravel</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">Git</span>
-                <span class="tag">GitHub</span>
-                <span class="tag">Debugging</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2>Languages and Additional Information</h2>
-          <div class="two-column compact">
-            <p>Native Spanish. English B2 in progress.</p>
-            <p>Driving licences B, A1, and AM. Own vehicle and full availability.</p>
-          </div>
-        </section>
-      </article>
-    </main>
-  </body>
+.page{max-width:820px;margin:0 auto;padding:32px 20px}
+.topbar{display:flex;gap:12px;justify-content:space-between;margin-bottom:20px}
+.topbar a,.topbar button{border:1px solid var(--line);background:transparent;padding:8px 12px;font:inherit;font-weight:700;color:var(--fg);text-decoration:none;cursor:pointer}
+@media print{.topbar{display:none}.page{padding:0;max-width:none}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--fg:#f3efe9;--muted:#c5beb5;--line:rgba(243,239,233,.2)}:root:not([data-theme="light"]) body{background:#141412}}
+@media print{:root{--fg:#10100f;--muted:#4f4a44;--line:rgba(16,16,15,.16)} body{background:#fff}}
+</style>
+</head>
+<body>
+<main class="page">
+<div class="topbar"><a href="/#cv">Back to portfolio</a><button type="button" onclick="window.print()">Print / save as PDF</button></div>
+<header><h1>Javier Ferrer Díaz</h1><p class="role">Full Stack Developer · Angular · NestJS · TypeScript</p><div class="contact"><span>javierferrerdiaz1@gmail.com</span><span>Granada, Spain</span><a href="https://github.com/Jaferdi">github.com/Jaferdi</a><a href="https://linkedin.com/in/javierfd1">linkedin.com/in/javierfd1</a><a href="https://portfolio-jaferdi.vercel.app">portfolio-jaferdi.vercel.app</a></div></header>
+<h2>Profile</h2><p>Full stack developer with a year and a half of experience building production software for public administrations and smart cities. I build product features with Angular and NestJS, write ETL pipelines and IoT and camera integrations, migrate legacy applications to the web and review code. I use AI coding agents every day.</p>
+<h2>Experience</h2>
+<h3>Full Stack Developer · Innovaciones Tecnológicas del Sur <span class="meta">· Jun 2025 – Nov 2026</span></h3><p class="muted">About 1,900 commits across 50+ repositories.</p>
+<ul>
+<li>Multi-tenant smart city platform for more than 10 city councils and a provincial council: dashboards (energy, parking, Wi-Fi, environment), a Leaflet geoportal, a Low Emission Zone system and a GIS inventory with CSV import.</li>
+<li>About 20 ETL pipelines in NestJS (weather, statistics, tourism and people-counting data) feeding Power BI, BoldBI and Microsoft Fabric, with automatic reconciliation.</li>
+<li>IoT and camera integrations: LoRaWAN sensors (ChirpStack), licence plate recognition with Hikvision and Avigilon, and automated DGT checks for the Low Emission Zone.</li>
+<li>Migrated more than 24 legacy C applications to Angular (Nx monorepo), checking each one against the original system. Code reviewer for the team's migrations.</li>
+<li>Redesign and real-time messaging (Socket.IO) for a conference-tourism platform, with Playwright end-to-end tests.</li>
+<li>Built Claude Code skills and agents that automate repetitive team tasks. For example, a check that took about 12 minutes now runs in 3 seconds.</li>
+</ul>
+<h3>Software Development Intern · Innovaciones Tecnológicas del Sur <span class="meta">· Mar – Jun 2025</span></h3>
+<ul><li>Built a full stack appointment and staff management app on my own: NestJS with hexagonal architecture, JWT, Socket.io, MinIO, Next.js 15 and Docker (<a href="https://github.com/Jaferdi/gestion-citas-fullstack">github.com/Jaferdi/gestion-citas-fullstack</a>).</li></ul>
+<h3>Intern · Grupo Euro-CENTER <span class="meta">· 2024</span></h3>
+<h2>Personal projects</h2>
+<p><b>Tokenometro</b> (<a href="https://github.com/Jaferdi/tokenometro">github.com/Jaferdi/tokenometro</a>): a dependency-free Python dashboard for Claude Code costs, with 93 tests and CI on Linux, macOS and Windows; also available as a plugin. <b>Portfolio</b>: Lit, Vite, Tailwind and three.js.</p>
+<h2>Education</h2><p>Higher Technician in Web Application Development, STEM Granada (2024–2025) · Higher Technician in Multiplatform Application Development, MEDAC Nevada (2022–2024)</p>
+<h2>Skills</h2><p>TypeScript, JavaScript, Python, SQL, PHP, Java · Angular, React, Next.js · NestJS, Express, TypeORM · MySQL, PostGIS, MongoDB, InfluxDB · Docker, Git/GitLab, GitHub Actions, Playwright, Jest · Power BI, BoldBI · Claude Code</p>
+<h2>Other</h2><p>Spanish (native), English B2 (in progress). Driving licences B, A1 and AM, own vehicle, available immediately.</p>
+</main>
+</body>
 </html>
