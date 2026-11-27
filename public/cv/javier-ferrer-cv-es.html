@@ -185,7 +185,8 @@
       @media print {
         body {
           background: #fff;
-          font-size: 10.5pt;
+          font-size: 9.6pt;
+          line-height: 1.38;
         }
 
         .page {
@@ -204,8 +205,18 @@
 
         section {
           break-inside: avoid;
-          padding: 15px 0;
+          padding: 10px 0;
         }
+      }
+    
+      @media print {
+        .sheet { background: #fff; }
+        h1 { font-size: 26pt; }
+        header { padding-bottom: 14px; gap: 10px; }
+        li { margin-top: 2px; }
+        .item { break-inside: avoid; }
+        section { break-inside: auto; }
+        @page { size: A4; margin: 13mm 14mm; }
       }
     </style>
   </head>
@@ -220,22 +231,25 @@
         <header>
           <div>
             <h1>Javier Ferrer Díaz</h1>
-            <p class="role">Desarrollador de Software Junior</p>
+            <p class="role">Desarrollador Full Stack · Angular · NestJS · TypeScript</p>
           </div>
           <div class="contact" aria-label="Datos de contacto">
             <a href="mailto:javierferrerdiaz1@gmail.com">javierferrerdiaz1@gmail.com</a>
             <span>Granada, España</span>
             <a href="https://github.com/Jaferdi">github.com/Jaferdi</a>
             <a href="https://linkedin.com/in/javierfd1">linkedin.com/in/javierfd1</a>
+            <a href="https://portfolio-phi-orpin-63.vercel.app">portfolio-phi-orpin-63.vercel.app</a>
           </div>
         </header>
 
         <section>
           <h2>Perfil</h2>
           <p>
-            Desarrollador de software junior con formación en Desarrollo de Aplicaciones Web y Desarrollo de
-            Aplicaciones Multiplataforma. Experiencia profesional resolviendo incidencias, realizando depuración,
-            análisis funcional, planificación de tareas de programación y adaptación a nuevos lenguajes y entornos.
+            Desarrollador full stack con año y medio de experiencia en proyectos reales para el sector público y smart
+            cities. Trabajo con Angular en el frontend, NestJS y Node.js en el backend, y bases de datos MySQL,
+            PostgreSQL/PostGIS, MongoDB e InfluxDB. Hago desarrollo de producto, ETLs e integraciones con dispositivos
+            IoT y cámaras, migración de aplicaciones legacy y revisión de código. Uso agentes de IA (Claude Code) a diario
+            para trabajar más rápido y con más calidad.
           </p>
         </section>
 
@@ -243,101 +257,82 @@
           <h2>Experiencia</h2>
           <div class="grid">
             <article class="item">
-              <p class="meta">2025 - Actualidad | Innovaciones Tecnológicas del Sur</p>
-              <h3>Desarrollador de Software</h3>
+              <p class="meta">Jun. 2025 – nov. 2026 | Innovaciones Tecnológicas del Sur (Innovasur)</p>
+              <h3>Desarrollador Full Stack</h3>
+              <p>Unos 1.900 commits en más de 50 repositorios, con flujo de ramas, merge requests y seguimiento de tareas en GitLab, Redmine y OpenProject.</p>
               <ul>
-                <li>Desarrollo y mantenimiento de software.</li>
-                <li>Resolución de incidencias y depuración de errores.</li>
-                <li>Comunicación efectiva, adaptación a cambios y mejora continua.</li>
+                <li><strong>Plataforma smart city multi-tenant in4city</strong> (Angular 20, Node.js/Express, NestJS, MySQL), usada por unos 12 ayuntamientos y por la Diputación de Jaén (hasta 71 municipios). Módulos: cuadros de mando de eficiencia energética, parking, WiFi y medio ambiente (LoRa); visor geoportal con Leaflet; gestión de puntos de interés y beacons; control de versiones de la app de turismo; inventario municipal GIS con importación CSV; incidencias y listas blancas de la Zona de Bajas Emisiones (ZBE); i18n ES/EN. Creé un componente común de acciones de tabla y lo llevé a muchos módulos.</li>
+                <li><strong>ETLs e integración de datos</strong> (NestJS + cron, TypeORM, Python). Unos 20 servicios: datos de AEMET, INE y Flux Vision (Orange), open data de turismo, conteo de personas y migración de contenidos de un CMS antiguo. Envío de datos a Power BI, BoldBI y Microsoft Fabric.</li>
+                <li><strong>IoT y cámaras</strong>: integraciones con cámaras Hikvision y Avigilon (lectura de matrículas), red LoRaWAN (ChirpStack), reenvío de matrículas a DGT y policía local para la ZBE, y carga y diagnóstico de inventario de sensores.</li>
+                <li><strong>Bases de datos</strong>: scripts versionados de migración en MySQL, PostGIS, MongoDB e InfluxDB. Altas masivas por script, por ejemplo 41 tenants de beacons y licencias en 71 municipios.</li>
+                <li><strong>Plataforma y BI</strong>: inicio de sesión único (SSO), con asignación de empresas a usuarios y sincronización de ciudadanos con el CMS (PHP/Symfony); roles y logs centralizados con Graylog; cuadros de mando en BoldBI para unos 11 municipios; capas GIS con ArcGIS y GeoJSON.</li>
+                <li><strong>Automatización con IA</strong>: skills y agentes de Claude Code para el equipo, que reparan los CSV de importación, escriben descripciones de merge request con plantilla, generan informes de revisión de código en Word y crean la configuración de las migraciones.</li>
+                <li><strong>Diputación de Jaén — migración del Plan Director a Angular</strong> (Angular 18, monorepo Nx, Informix). Migración de más de 24 aplicaciones legacy en C a web, con validación funcional contra el sistema original. Revisor de código de las migraciones de otros compañeros, con informes de incidencias y re-revisiones.</li>
+                <li><strong>Sede Electrónica de la Diputación de Jaén</strong> (Angular 18, PrimeNG, Tailwind, Java): migración de trámites (facturas, permisos y licencias, cuentas bancarias, registro SIR, órganos colegiados) y componentes reutilizables.</li>
+                <li><strong>Plataforma MICE de Jerez para SEGITTUR</strong> (NestJS, Angular 19, Socket.IO, MongoDB, Docker): rediseño del sitio público y de los paneles privados, mensajería en tiempo real entre solicitantes y proveedores, integración con la API de SEGITTUR y tests e2e con Playwright.</li>
               </ul>
             </article>
             <article class="item">
-              <p class="meta">2025 | Innovaciones Tecnológicas del Sur</p>
-              <h3>Prácticas de Desarrollo de Software</h3>
+              <p class="meta">Mar. 2025 – jun. 2025 | Innovaciones Tecnológicas del Sur (Innovasur)</p>
+              <h3>Prácticas de Desarrollo</h3>
               <ul>
-                <li>Apoyo en tareas de programación, codificación y trabajo individual sobre funcionalidades asignadas.</li>
-                <li>Análisis funcional y planificación de tareas de programación.</li>
-                <li>Resolución de incidencias y adaptación a nuevos lenguajes.</li>
+                <li>Aplicación full stack de gestión de departamentos, personal, salas, procedimientos y citas, desarrollada por completo por mí (284 commits). NestJS 11 con arquitectura hexagonal, autenticación JWT con roles, notificaciones en tiempo real (Socket.io), almacenamiento de ficheros en MinIO (compatible con S3) y API documentada con Swagger. Frontend en Next.js 15 y React 19 con calendario de citas. Todo desplegado con Docker Compose.</li>
               </ul>
             </article>
             <article class="item">
               <p class="meta">2024 | Grupo Euro-CENTER</p>
               <h3>Prácticas</h3>
               <ul>
-                <li>Resolución de problemas en un entorno profesional.</li>
-                <li>Planificación, organización, observación y análisis de tareas.</li>
-                <li>Trabajo en equipo, creatividad y adaptabilidad.</li>
+                <li>Resolución de problemas, planificación y análisis de tareas en un entorno profesional y trabajo en equipo.</li>
               </ul>
             </article>
           </div>
         </section>
 
         <section>
-          <h2>Estudios</h2>
+          <h2>Proyectos personales</h2>
           <div class="grid">
             <article class="item">
-              <p class="meta">2024 - 2025 | STEM Granada</p>
-              <h3>Grado Superior en Desarrollo de Aplicaciones Web</h3>
+              <p class="meta"><a href="https://github.com/Jaferdi/tokenometro">github.com/Jaferdi/tokenometro</a></p>
+              <h3>Tokenometro</h3>
+              <p>Panel local que muestra cuánto cuestan las sesiones de Claude Code y recomienda cómo gastar menos. Python solo con la biblioteca estándar (sin dependencias), con 93 tests, CI en GitHub Actions (Linux, macOS y Windows), paquete instalable con pipx y plugin de Claude Code. Bilingüe ES/EN, con licencia MIT.</p>
             </article>
             <article class="item">
-              <p class="meta">2022 - 2024 | MEDAC Nevada</p>
-              <h3>Grado Superior en Desarrollo de Aplicaciones Multiplataforma</h3>
+              <p class="meta"><a href="https://github.com/Jaferdi/Portfolio">github.com/Jaferdi/Portfolio</a></p>
+              <h3>Portfolio</h3>
+              <p>Web personal con web components de Lit, Vite, Tailwind CSS y three.js, desplegada en Vercel.</p>
             </article>
           </div>
         </section>
 
         <section>
-          <h2>Proyectos</h2>
-          <div class="grid">
+          <h2>Estudios</h2>
+          <div class="two-column">
             <article class="item">
-              <p class="meta">github.com/Jaferdi/Portfolio</p>
-              <h3>Portfolio personal</h3>
-              <p>Portfolio desarrollado para presentar proyectos, experiencia, estudios y tecnologías con enfoque en rendimiento, arquitectura limpia y experiencia de usuario.</p>
+              <p class="meta">2024 – 2025 | STEM Granada</p>
+              <h3>CFGS Desarrollo de Aplicaciones Web</h3>
             </article>
             <article class="item">
-              <p class="meta">github.com/Jaferdi/TresEnRaya</p>
-              <h3>Tres en Raya</h3>
-              <p>Proyecto Java de tres en raya con clases de dominio para tablero, celdas y jugadores, además de documentación Javadoc publicada en GitHub Pages.</p>
+              <p class="meta">2022 – 2024 | MEDAC Nevada</p>
+              <h3>CFGS Desarrollo de Aplicaciones Multiplataforma</h3>
             </article>
           </div>
         </section>
 
         <section>
           <h2>Competencias técnicas</h2>
-          <div class="two-column">
-            <div>
-              <h3>Lenguajes y frontend</h3>
-              <div class="tags">
-                <span class="tag">Java</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">React</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">Tailwind CSS</span>
-              </div>
-            </div>
-            <div>
-              <h3>Backend, datos y herramientas</h3>
-              <div class="tags">
-                <span class="tag">PHP</span>
-                <span class="tag">Laravel</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">Git</span>
-                <span class="tag">GitHub</span>
-                <span class="tag">Debugging</span>
-              </div>
-            </div>
+          <div class="grid compact">
+            <p><strong>Lenguajes:</strong> TypeScript, JavaScript, Python, SQL, PHP, Java, Bash.</p>
+            <p><strong>Frontend:</strong> Angular (14–20), React, Next.js, Lit, Kendo UI, PrimeNG, Tailwind CSS, Bootstrap, Leaflet.</p>
+            <p><strong>Backend:</strong> NestJS, Node.js/Express, TypeORM, Socket.IO, JWT, Spring Boot, Symfony y Laravel (nivel básico).</p>
+            <p><strong>Datos:</strong> MySQL, PostgreSQL/PostGIS, MongoDB, InfluxDB, Informix, SQL Server/Microsoft Fabric, Power BI, BoldBI.</p>
+            <p><strong>Herramientas:</strong> Git, GitLab, GitHub Actions, Docker, Playwright, Jest, Nx, Redmine, OpenProject, ArcGIS, Claude Code.</p>
           </div>
         </section>
 
         <section>
           <h2>Idiomas y otros datos</h2>
-          <div class="two-column compact">
-            <p>Español nativo. Inglés B2 en curso.</p>
-            <p>Carnet de conducir B, A1 y AM. Vehículo propio y disponibilidad total.</p>
-          </div>
+          <p class="compact">Español nativo. Inglés B2 (en curso). Carnet de conducir B, A1 y AM. Vehículo propio y disponibilidad inmediata.</p>
         </section>
       </article>
     </main>

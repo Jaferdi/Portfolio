@@ -1,30 +1,30 @@
 export const profile = {
   name: 'Javier Ferrer Díaz',
-  role: 'Junior Software Developer',
+  role: 'Full Stack Developer',
   location: 'Granada, Spain',
   email: 'javierferrerdiaz1@gmail.com',
   github: 'https://github.com/Jaferdi',
   linkedin: 'https://linkedin.com/in/javierfd1',
   summary:
-    'Junior software developer trained in web and multiplatform application development. I work with Java, PHP, Laravel, React, JavaScript, TypeScript, MySQL, MongoDB, Git, and GitHub, with professional experience resolving incidents, debugging, planning development tasks, and adapting to new languages and codebases.',
+    'Full stack developer with a year and a half of production experience building software for the public sector and smart cities: a multi-tenant platform used by about 12 city councils, around 20 ETL pipelines, IoT and camera integrations, and the migration of legacy C applications to Angular. I work with Angular, NestJS, TypeScript, MySQL, PostGIS, MongoDB and InfluxDB, and I use AI coding agents every day.',
 };
 
 export const skills = [
   {
     group: 'Frontend & UI',
-    items: ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Tailwind CSS'],
+    items: ['Angular', 'React', 'Next.js', 'TypeScript', 'Kendo UI', 'PrimeNG', 'Tailwind CSS', 'Leaflet'],
   },
   {
     group: 'Backend',
-    items: ['Java', 'PHP', 'Laravel', 'Object-oriented programming', 'Functional analysis'],
+    items: ['NestJS', 'Node.js / Express', 'TypeORM', 'Socket.IO', 'Python', 'PHP', 'Java'],
   },
   {
-    group: 'Data & Tools',
-    items: ['MySQL', 'MongoDB', 'Git', 'GitHub', 'Debugging'],
+    group: 'Data & Integrations',
+    items: ['MySQL', 'PostgreSQL / PostGIS', 'MongoDB', 'InfluxDB', 'ETL', 'LoRaWAN', 'Power BI', 'BoldBI'],
   },
   {
-    group: 'Languages & Work',
-    items: ['Spanish', 'English B2 in progress', 'Teamwork', 'Task planning', 'Continuous improvement'],
+    group: 'Tools & Ways of Working',
+    items: ['Git / GitLab', 'Docker', 'Playwright', 'GitHub Actions', 'Code review', 'Claude Code', 'Spanish (native)', 'English B2'],
   },
 ];
 
@@ -50,42 +50,49 @@ export const cvLinks = [
     action: 'Abrir PDF',
     href: '/cv/javier-ferrer-cv-es.pdf',
   },
+  {
+    language: 'PDF (EN)',
+    label: 'Download CV PDF',
+    description: 'Printable English version for international applications.',
+    action: 'Open PDF',
+    href: '/cv/javier-ferrer-cv-en.pdf',
+  },
 ];
 
 export const projects = [
+  {
+    title: 'Tokenometro',
+    description:
+      'Local dashboard that shows what Claude Code sessions cost, where the tokens go and what to change to spend less. Dependency-free Python, 93 tests, CI on Linux, macOS and Windows, installable with pipx and as a Claude Code plugin.',
+    stack: ['Python', 'SQLite', 'GitHub Actions', 'Claude Code plugin'],
+    source: 'https://github.com/Jaferdi/tokenometro',
+  },
   {
     title: 'Portfolio',
     description:
       'Personal portfolio built to present my projects, experience, education, and technical profile with a polished, responsive interface.',
     stack: ['JavaScript', 'Lit', 'Vite', 'Tailwind CSS', 'Three.js'],
-    live: 'https://portfolio-jaferdi.vercel.app/',
+    live: 'https://portfolio-phi-orpin-63.vercel.app/',
     source: 'https://github.com/Jaferdi/Portfolio',
-  },
-  {
-    title: 'Tres en Raya',
-    description:
-      'Java tic-tac-toe project with domain classes for the board, cells, players, and generated Javadoc documentation published through GitHub Pages.',
-    stack: ['Java', 'HTML', 'CSS', 'JavaScript', 'Javadoc'],
-    live: 'https://jaferdi.github.io/TresEnRaya/',
-    source: 'https://github.com/Jaferdi/TresEnRaya',
   },
 ];
 
 export const experience = [
   {
-    period: '2025 - Present',
-    title: 'Software Developer',
+    period: 'Jun 2025 - Nov 2026',
+    title: 'Full Stack Developer',
     company: 'Innovaciones Tecnológicas del Sur',
-    detail: 'Develops and maintains software while resolving incidents, debugging, and improving existing functionality.',
-    highlights: ['Software development', 'Incident resolution', 'Debugging', 'Continuous improvement'],
+    detail:
+      'Built a multi-tenant smart city platform used by about 12 city councils, around 20 ETL pipelines, IoT and licence plate camera integrations, and migrated more than 24 legacy C applications to Angular for the Provincial Council of Jaén. About 1,900 commits across more than 50 repositories.',
+    highlights: ['Angular', 'NestJS', 'ETL & IoT', 'Legacy migration', 'Code review', 'AI automation'],
   },
   {
-    period: '2025',
+    period: 'Mar 2025 - Jun 2025',
     title: 'Software Development Intern',
     company: 'Innovaciones Tecnológicas del Sur',
     detail:
-      'Supported programming tasks, incident resolution, functional analysis, and adaptation to new languages during professional practice.',
-    highlights: ['Coding tasks', 'Functional analysis', 'Task planning', 'New language adaptation'],
+      'Built a full stack appointment and staff management app on my own: NestJS with hexagonal architecture, JWT, Socket.io, MinIO, Next.js 15 and Docker.',
+    highlights: ['NestJS', 'Next.js', 'Hexagonal architecture', 'Docker'],
   },
   {
     period: '2024',
@@ -93,7 +100,7 @@ export const experience = [
     company: 'Grupo Euro-CENTER',
     detail:
       'Completed technical internship work focused on problem solving, observation, analysis, planning, and collaborative delivery.',
-    highlights: ['Problem solving', 'Planning and organization', 'Observation and analysis', 'Teamwork'],
+    highlights: ['Problem solving', 'Planning and organization', 'Teamwork'],
   },
 ];
 
@@ -114,15 +121,15 @@ export const education = [
 
 export const facts = [
   {
-    value: '2',
-    label: 'higher degrees',
+    value: '1.5',
+    label: 'years in production',
   },
   {
-    value: '3',
-    label: 'professional stages',
+    value: '~1,900',
+    label: 'commits at work',
   },
   {
-    value: '2',
-    label: 'public GitHub repos',
+    value: '12+',
+    label: 'city councils served',
   },
 ];
