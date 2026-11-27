@@ -6,7 +6,7 @@ export const profile = {
   github: 'https://github.com/Jaferdi',
   linkedin: 'https://linkedin.com/in/javierfd1',
   summary:
-    'Full stack developer with a year and a half of production experience building software for the public sector and smart cities: a multi-tenant platform for more than 10 city councils, around 20 ETL pipelines, IoT and camera integrations, and the migration of legacy C applications to Angular. I work with Angular, NestJS, TypeScript, MySQL, PostGIS, MongoDB and InfluxDB, and I use AI coding agents every day.',
+    'Full stack developer with a year and a half of production experience building software for the public sector and smart cities: a multi-tenant platform for city councils, ETL pipelines, IoT and camera integrations, and the migration of legacy C applications to Angular. I work with Angular, NestJS, TypeScript, MySQL, PostGIS, MongoDB and InfluxDB, and I use AI coding agents every day.',
 };
 
 export const skills = [
@@ -63,7 +63,7 @@ export const projects = [
   {
     title: 'Tokenometro',
     description:
-      'Local dashboard that shows what Claude Code sessions cost, where the tokens go and what to change to spend less. Dependency-free Python, 93 tests, CI on Linux, macOS and Windows, installable with pipx and as a Claude Code plugin.',
+      'Local dashboard that shows what Claude Code sessions cost, where the tokens go and what to change to spend less. Dependency-free Python with tests and CI on Linux, macOS and Windows, installable with pipx and as a Claude Code plugin.',
     stack: ['Python', 'SQLite', 'GitHub Actions', 'Claude Code plugin'],
     source: 'https://github.com/Jaferdi/tokenometro',
   },
@@ -90,7 +90,7 @@ export const experience = [
     title: 'Full Stack Developer',
     company: 'Innovaciones Tecnológicas del Sur',
     detail:
-      'Built a multi-tenant smart city platform for more than 10 city councils, around 20 ETL pipelines, IoT and licence plate camera integrations, and migrated more than 24 legacy C applications to Angular. About 1,900 commits across more than 50 repositories.',
+      'Built a multi-tenant smart city platform for city councils, ETL pipelines, IoT and licence plate camera integrations, and migrated legacy C applications to Angular. Daily AI-assisted development with Claude Code, agents and MCP.',
     highlights: ['Angular', 'NestJS', 'ETL & IoT', 'Legacy migration', 'Code review', 'AI automation'],
   },
   {
@@ -132,11 +132,11 @@ export const facts = [
     label: 'years in production',
   },
   {
-    value: '~1,900',
-    label: 'commits at work',
+    value: 'Full stack',
+    label: 'Angular + NestJS',
   },
   {
-    value: '10+',
-    label: 'city councils served',
+    value: 'AI-first',
+    label: 'Claude Code, agents, MCP',
   },
 ];
