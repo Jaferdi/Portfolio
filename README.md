@@ -2,7 +2,7 @@
 
 My personal site: the projects I've built, my experience and the technologies I work with.
 
-**Live:** [portfolio-phi-orpin-63.vercel.app](https://portfolio-phi-orpin-63.vercel.app)
+**Live:** [portfolio-jaferdi.vercel.app](https://portfolio-jaferdi.vercel.app)
 
 Built with [Lit](https://lit.dev) web components, [Vite](https://vite.dev), [Tailwind CSS](https://tailwindcss.com) and [three.js](https://threejs.org), with a focus on performance, clean architecture and user experience.
 
