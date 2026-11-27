@@ -39,9 +39,11 @@ class ProjectsSection extends LitElement {
                     )}
                   </div>
                   <div class="mt-8 flex gap-4 text-sm font-semibold">
-                    <a class="magnetic-link rounded-[6px] px-1 text-accent hover:opacity-70" href=${project.live} target="_blank" rel="noopener" aria-label="Open live preview for ${project.title}">
-                      Live
-                    </a>
+                    ${project.live
+                      ? html`<a class="magnetic-link rounded-[6px] px-1 text-accent hover:opacity-70" href=${project.live} target="_blank" rel="noopener" aria-label="Open live preview for ${project.title}">
+                          Live
+                        </a>`
+                      : ''}
                     <a class="magnetic-link rounded-[6px] px-1 text-[color:var(--fg)] hover:text-accent" href=${project.source} target="_blank" rel="noopener" aria-label="Open source code for ${project.title}">
                       Source
                     </a>

@@ -185,7 +185,8 @@
       @media print {
         body {
           background: #fff;
-          font-size: 10.5pt;
+          font-size: 9.6pt;
+          line-height: 1.38;
         }
 
         .page {
@@ -204,8 +205,18 @@
 
         section {
           break-inside: avoid;
-          padding: 15px 0;
+          padding: 10px 0;
         }
+      }
+    
+      @media print {
+        .sheet { background: #fff; }
+        h1 { font-size: 26pt; }
+        header { padding-bottom: 14px; gap: 10px; }
+        li { margin-top: 2px; }
+        .item { break-inside: avoid; }
+        section { break-inside: auto; }
+        @page { size: A4; margin: 13mm 14mm; }
       }
     </style>
   </head>
@@ -213,29 +224,32 @@
     <main class="page">
       <div class="topbar">
         <a class="button" href="/#cv">Back to portfolio</a>
-        <button class="button" type="button" onclick="window.print()">Print / Save as PDF</button>
+        <button class="button" type="button" onclick="window.print()">Print / save as PDF</button>
       </div>
 
       <article class="sheet">
         <header>
           <div>
             <h1>Javier Ferrer Díaz</h1>
-            <p class="role">Junior Software Developer</p>
+            <p class="role">Full Stack Developer · Angular · NestJS · TypeScript</p>
           </div>
           <div class="contact" aria-label="Contact details">
             <a href="mailto:javierferrerdiaz1@gmail.com">javierferrerdiaz1@gmail.com</a>
             <span>Granada, Spain</span>
             <a href="https://github.com/Jaferdi">github.com/Jaferdi</a>
             <a href="https://linkedin.com/in/javierfd1">linkedin.com/in/javierfd1</a>
+            <a href="https://portfolio-phi-orpin-63.vercel.app">portfolio-phi-orpin-63.vercel.app</a>
           </div>
         </header>
 
         <section>
           <h2>Profile</h2>
           <p>
-            Junior software developer trained in Web Application Development and Multiplatform Application Development.
-            Professional experience resolving incidents, debugging, performing functional analysis, planning programming
-            tasks, and adapting to new languages and environments.
+            Full stack developer with a year and a half of hands-on experience building software for the public sector
+            and smart cities. Angular on the front end; NestJS and Node.js on the back end; MySQL, PostgreSQL/PostGIS,
+            MongoDB and InfluxDB for data. I build product features, ETL pipelines and IoT and camera integrations,
+            migrate legacy applications and review code. I use AI coding agents (Claude Code) every day to ship faster
+            and with better quality.
           </p>
         </section>
 
@@ -243,101 +257,82 @@
           <h2>Experience</h2>
           <div class="grid">
             <article class="item">
-              <p class="meta">2025 - Present | Innovaciones Tecnológicas del Sur</p>
-              <h3>Software Developer</h3>
+              <p class="meta">Jun 2025 – Nov 2026 | Innovaciones Tecnológicas del Sur (Innovasur)</p>
+              <h3>Full Stack Developer</h3>
+              <p>Around 1,900 commits across more than 50 repositories, working with feature branches and merge requests, and tracking work in GitLab, Redmine and OpenProject.</p>
               <ul>
-                <li>Develop and maintain software.</li>
-                <li>Resolve incidents and debug errors.</li>
-                <li>Communicate effectively, adapt to changes, and contribute to continuous improvement.</li>
+                <li><strong>in4city multi-tenant smart city platform</strong> (Angular 20, Node.js/Express, NestJS, MySQL), used by about 12 city councils and the Provincial Council of Jaén (up to 71 municipalities). Modules: dashboards for energy efficiency, parking, Wi-Fi and environmental data (LoRa); a Leaflet geoportal viewer; points of interest and beacons; release management for the tourism app; a GIS municipal inventory with CSV import; incidents and whitelists for the Low Emission Zone (LEZ); ES/EN i18n. I also built a shared table-actions component and rolled it out across many modules.</li>
+                <li><strong>ETL and data integration</strong> (NestJS + cron, TypeORM, Python). About 20 services: AEMET weather, INE and Orange Flux Vision statistics, tourism open data, people counting and content migration from a legacy CMS. Data delivered to Power BI, BoldBI and Microsoft Fabric.</li>
+                <li><strong>IoT and cameras</strong>: integrations with Hikvision and Avigilon cameras (licence plate recognition) and a LoRaWAN network (ChirpStack); forwarding of plate reads to the DGT (Spanish traffic authority) and local police for the LEZ; sensor inventory loading and troubleshooting.</li>
+                <li><strong>Databases</strong>: versioned migration scripts for MySQL, PostGIS, MongoDB and InfluxDB. Scripted bulk provisioning, such as 41 beacon tenants and licences for 71 municipalities.</li>
+                <li><strong>Platform and BI</strong>: single sign-on (SSO), with company assignment for users and citizen sync with the CMS (PHP/Symfony); roles and centralised logging with Graylog; BoldBI dashboards for about 11 municipalities; GIS layers with ArcGIS and GeoJSON.</li>
+                <li><strong>AI automation</strong>: Claude Code skills and agents for the team that repair import CSVs, write merge request descriptions from a template, produce code review reports in Word and generate migration configuration.</li>
+                <li><strong>Provincial Council of Jaén: legacy-to-Angular migration</strong> (Angular 18, Nx monorepo, Informix). Migrated more than 24 legacy C applications to the web, checking each one against the original system. Also code reviewer for teammates' migrations, writing review reports and doing follow-up reviews.</li>
+                <li><strong>Provincial Council of Jaén e-government portal</strong> (Angular 18, PrimeNG, Tailwind, Java): migrated online procedures (invoices, permits and licences, bank accounts, SIR registry, governing bodies) and built reusable components.</li>
+                <li><strong>MICE platform for Jerez (SEGITTUR)</strong> (NestJS, Angular 19, Socket.IO, MongoDB, Docker): redesign of the public site and private dashboards, real-time messaging between event organisers and suppliers, integration with the SEGITTUR API and end-to-end tests with Playwright.</li>
               </ul>
             </article>
             <article class="item">
-              <p class="meta">2025 | Innovaciones Tecnológicas del Sur</p>
+              <p class="meta">Mar 2025 – Jun 2025 | Innovaciones Tecnológicas del Sur (Innovasur)</p>
               <h3>Software Development Intern</h3>
               <ul>
-                <li>Supported programming, coding, and individual work on assigned features.</li>
-                <li>Performed functional analysis and planned programming tasks.</li>
-                <li>Resolved incidents and adapted to new languages.</li>
+                <li>Built a full stack app to manage departments, staff, rooms, procedures and appointments on my own (284 commits). Back end: NestJS 11 with hexagonal architecture, JWT authentication with roles, real-time notifications (Socket.io), file storage in MinIO (S3-compatible) and a Swagger-documented API. Front end: Next.js 15 and React 19 with an appointment calendar. Everything runs with Docker Compose.</li>
               </ul>
             </article>
             <article class="item">
               <p class="meta">2024 | Grupo Euro-CENTER</p>
               <h3>Intern</h3>
               <ul>
-                <li>Worked on problem solving in a professional environment.</li>
-                <li>Supported task planning, organization, observation, and analysis.</li>
-                <li>Practiced teamwork, creativity, and adaptability.</li>
+                <li>Problem solving, task planning and analysis in a professional team environment.</li>
               </ul>
             </article>
           </div>
         </section>
 
         <section>
-          <h2>Education</h2>
+          <h2>Personal projects</h2>
           <div class="grid">
             <article class="item">
-              <p class="meta">2024 - 2025 | STEM Granada</p>
+              <p class="meta"><a href="https://github.com/Jaferdi/tokenometro">github.com/Jaferdi/tokenometro</a></p>
+              <h3>Tokenometro</h3>
+              <p>Local dashboard that shows what Claude Code sessions cost and recommends how to spend less. Python standard library only (no dependencies), 93 tests, GitHub Actions CI on Linux, macOS and Windows, installable with pipx and available as a Claude Code plugin. Bilingual EN/ES, MIT licence.</p>
+            </article>
+            <article class="item">
+              <p class="meta"><a href="https://github.com/Jaferdi/Portfolio">github.com/Jaferdi/Portfolio</a></p>
+              <h3>Portfolio</h3>
+              <p>Personal website built with Lit web components, Vite, Tailwind CSS and three.js, deployed on Vercel.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <div class="two-column">
+            <article class="item">
+              <p class="meta">2024 – 2025 | STEM Granada</p>
               <h3>Higher Technician in Web Application Development</h3>
             </article>
             <article class="item">
-              <p class="meta">2022 - 2024 | MEDAC Nevada</p>
+              <p class="meta">2022 – 2024 | MEDAC Nevada</p>
               <h3>Higher Technician in Multiplatform Application Development</h3>
             </article>
           </div>
         </section>
 
         <section>
-          <h2>Projects</h2>
-          <div class="grid">
-            <article class="item">
-              <p class="meta">github.com/Jaferdi/Portfolio</p>
-              <h3>Personal Portfolio</h3>
-              <p>Portfolio built to present projects, experience, education, and technologies with attention to performance, clean architecture, and user experience.</p>
-            </article>
-            <article class="item">
-              <p class="meta">github.com/Jaferdi/TresEnRaya</p>
-              <h3>Tic-tac-toe</h3>
-              <p>Java tic-tac-toe project with domain classes for board, cells, and players, plus Javadoc documentation published through GitHub Pages.</p>
-            </article>
+          <h2>Technical skills</h2>
+          <div class="grid compact">
+            <p><strong>Languages:</strong> TypeScript, JavaScript, Python, SQL, PHP, Java, Bash.</p>
+            <p><strong>Front end:</strong> Angular (14–20), React, Next.js, Lit, Kendo UI, PrimeNG, Tailwind CSS, Bootstrap, Leaflet.</p>
+            <p><strong>Back end:</strong> NestJS, Node.js/Express, TypeORM, Socket.IO, JWT; basic Spring Boot, Symfony and Laravel.</p>
+            <p><strong>Data:</strong> MySQL, PostgreSQL/PostGIS, MongoDB, InfluxDB, Informix, SQL Server/Microsoft Fabric, Power BI, BoldBI.</p>
+            <p><strong>Tools:</strong> Git, GitLab, GitHub Actions, Docker, Playwright, Jest, Nx, Redmine, OpenProject, ArcGIS, Claude Code.</p>
           </div>
         </section>
 
         <section>
-          <h2>Technical Skills</h2>
-          <div class="two-column">
-            <div>
-              <h3>Languages and frontend</h3>
-              <div class="tags">
-                <span class="tag">Java</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">React</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">Tailwind CSS</span>
-              </div>
-            </div>
-            <div>
-              <h3>Backend, data, and tools</h3>
-              <div class="tags">
-                <span class="tag">PHP</span>
-                <span class="tag">Laravel</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">Git</span>
-                <span class="tag">GitHub</span>
-                <span class="tag">Debugging</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2>Languages and Additional Information</h2>
-          <div class="two-column compact">
-            <p>Native Spanish. English B2 in progress.</p>
-            <p>Driving licences B, A1, and AM. Own vehicle and full availability.</p>
-          </div>
+          <h2>Languages and other details</h2>
+          <p class="compact">Spanish (native). English B2 (in progress). Driving licences B, A1 and AM. Own vehicle; available immediately.</p>
         </section>
       </article>
     </main>
